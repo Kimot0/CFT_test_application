@@ -41,42 +41,23 @@ class DetailedPersonInformation: Fragment(R.layout.detailed_person_information) 
             fullAge.text = person.age + " y.o"
             fullBirthday.text = person.dob.removeRange(10,person.dob.length)
             fullNumber.setOnClickListener {
-                val phoneIntent = Intent(Intent.ACTION_DIAL).apply {
-                    data = Uri.parse("tel:${person.phone}")
-                }
-                startActivity(phoneIntent)
+                startPhoneIntent(person)
             }
             numberForward.setOnClickListener {
-                val phoneIntent = Intent(Intent.ACTION_DIAL).apply {
-                    data = Uri.parse("tel:${person.phone}")
-                }
-                startActivity(phoneIntent)
+                startPhoneIntent(person)
             }
             emailForward.setOnClickListener {
-                val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
-                    data = Uri.parse("mailto: ${person.email}")
-                }
-                startActivity(emailIntent)
+                startEmailIntent(person)
             }
             fullEmail.setOnClickListener {
-                val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
-                    data = Uri.parse("mailto: ${person.email}")
-                }
-                startActivity(emailIntent)
+                startEmailIntent(person)
             }
             addressForward.setOnClickListener {
-                val mapIntent = Intent(Intent.ACTION_VIEW).apply {
-                    data = Uri.parse("geo:0,0?q=${person.location}")
-                }
-                startActivity(mapIntent)
+                startMapIntent(person)
             }
             fullAddress.setOnClickListener {
-                val mapIntent = Intent(Intent.ACTION_VIEW).apply {
-                    data = Uri.parse("geo:0,0?q=${person.location}")
-                }
-                startActivity(mapIntent)
+                startMapIntent(person)
             }
-
         }
     }
     private fun getData(position : Int) {
@@ -91,5 +72,26 @@ class DetailedPersonInformation: Fragment(R.layout.detailed_person_information) 
                 Status.LOADING -> Unit
             }
         }
+    }
+
+    private fun startPhoneIntent(person: RandomUser){
+        val phoneIntent = Intent(Intent.ACTION_DIAL).apply {
+            data = Uri.parse("tel:${person.phone}")
+        }
+        startActivity(phoneIntent)
+    }
+
+    private fun startEmailIntent(person:RandomUser){
+        val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto: ${person.email}")
+        }
+        startActivity(emailIntent)
+    }
+
+    private fun startMapIntent(person:RandomUser){
+        val mapIntent = Intent(Intent.ACTION_VIEW).apply {
+            data = Uri.parse("geo:0,0?q=${person.location}")
+        }
+        startActivity(mapIntent)
     }
 }

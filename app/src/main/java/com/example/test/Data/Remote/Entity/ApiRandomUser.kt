@@ -1,8 +1,6 @@
 package com.example.test.Data.Remote.Entity
 
-import androidx.room.ColumnInfo
 import com.example.test.Domain.Entity.RandomUser
-import com.example.test.Domain.Entity.ShortRandomUser
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import com.squareup.moshi.JsonClass

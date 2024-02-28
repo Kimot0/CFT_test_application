@@ -6,6 +6,7 @@ import android.text.SpannableStringBuilder
 import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.CircleCropTransformation
@@ -17,6 +18,7 @@ class RecyclerAdapter(
 ) : RecyclerView.Adapter<RecyclerAdapter.RecyclerViewHolder>() {
 
     private var dataList: MutableList<RandomUser> = mutableListOf()
+    private lateinit var diffCallback:MainListDiffUtils
 
     inner class RecyclerViewHolder(
         private val binding: ItemPersonCardBinding,
@@ -48,9 +50,10 @@ class RecyclerAdapter(
     }
 
     fun setUpdatedData(dataList: List<RandomUser>) {
-        this.dataList.clear()
-        this.dataList.addAll(dataList)
-        notifyDataSetChanged()
+        diffCallback = MainListDiffUtils(this.dataList,dataList)
+        val diffResult:DiffUtil.DiffResult = DiffUtil.calculateDiff(diffCallback)
+        this.dataList= dataList.toMutableList()
+        diffResult.dispatchUpdatesTo(this)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {

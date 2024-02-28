@@ -8,7 +8,7 @@ import com.example.test.Data.Remote.Entity.DBRandomUser
 
 @Dao
 interface RandomUserDao {
-    @Query("Select * from RandomUsers")
+    @Query("""Select * from RandomUsers""")
     suspend fun getFullUserInfo():List<DBRandomUser>
 
     @Upsert
