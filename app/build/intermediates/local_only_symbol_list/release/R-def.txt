@@ -1,0 +1,30 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable bull
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id addres
+id fio
+id fullAddress
+id fullBirthday
+id fullEmail
+id fullFIO
+id fullNumber
+id fullPassword
+id fullPhoto
+id personRecycler
+id phone
+id picture
+id swipe
+layout activity_main
+layout full_person_card
+layout item_person_card
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Test
+style Theme.Test
+xml backup_rules
+xml data_extraction_rules

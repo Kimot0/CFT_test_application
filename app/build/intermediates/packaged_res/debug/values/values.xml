@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="grey">#bebebe</color>
+    <color name="itemBack">#eceff1</color>
+    <color name="lightgrey">#d3d3d3</color>
+    <color name="recBack">#cfd8dc</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">test</string>
+    <style name="Base.Theme.Test" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>
+    <style name="Theme.Test" parent="Base.Theme.Test"/>
+</resources>

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.example.test.app-mergeReleaseResources-3:/layout/item_person_card.xml",
+        "source": "com.example.test.app-main-5:/layout/item_person_card.xml"
+    },
+    {
+        "merged": "com.example.test.app-mergeReleaseResources-3:/layout/activity_main.xml",
+        "source": "com.example.test.app-main-5:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.test.app-mergeReleaseResources-3:/layout/full_person_card.xml",
+        "source": "com.example.test.app-main-5:/layout/full_person_card.xml"
+    }
+]

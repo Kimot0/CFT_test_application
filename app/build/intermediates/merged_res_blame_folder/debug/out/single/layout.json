@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\android\\.gradle\\daemon\\8.0\\com.example.test.app-mergeDebugResources-3:\\layout\\detailed_person_information.xml",
+        "source": "D:\\android\\.gradle\\daemon\\8.0\\com.example.test.app-main-6:\\layout\\detailed_person_information.xml"
+    },
+    {
+        "merged": "D:\\android\\.gradle\\daemon\\8.0\\com.example.test.app-mergeDebugResources-3:\\layout\\activity_main.xml",
+        "source": "D:\\android\\.gradle\\daemon\\8.0\\com.example.test.app-main-6:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\android\\.gradle\\daemon\\8.0\\com.example.test.app-mergeDebugResources-3:\\layout\\main_screen_fragment.xml",
+        "source": "D:\\android\\.gradle\\daemon\\8.0\\com.example.test.app-main-6:\\layout\\main_screen_fragment.xml"
+    },
+    {
+        "merged": "D:\\android\\.gradle\\daemon\\8.0\\com.example.test.app-mergeDebugResources-3:\\layout\\item_person_card.xml",
+        "source": "D:\\android\\.gradle\\daemon\\8.0\\com.example.test.app-main-6:\\layout\\item_person_card.xml"
+    },
+    {
+        "merged": "com.example.test.app-mergeDebugResources-3:/layout/detailed_person_information.xml",
+        "source": "com.example.test.app-main-6:/layout/detailed_person_information.xml"
+    }
+]
