@@ -1,5 +1,7 @@
 package com.example.test.UI
 
+import android.content.Context
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -40,14 +42,22 @@ class MainFragment : Fragment(R.layout.main_screen_fragment) {
     }
 
     private fun bindui() {
+        val connectivityManager =
+            context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val network = connectivityManager.activeNetwork
         with(binding){
             personRecycler.layoutManager = LinearLayoutManager(requireContext())
             personRecycler.adapter = adapter
             with(swipe){
                 setOnRefreshListener {
-                    mainViewModel.updateUsers()
-                    getData()
-                    isRefreshing = false
+                    isRefreshing = if(network == null){
+                        Toast.makeText(context,"No internet connection",Toast.LENGTH_SHORT).show()
+                        false
+                    }else{
+                        mainViewModel.updateUsers()
+                        getData()
+                        false
+                    }
                 }
             }
         }
